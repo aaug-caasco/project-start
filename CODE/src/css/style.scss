@@ -1,2 +1,15 @@
-@import "../../../../caa-dev/source/sass/generic/variables";
-@import "../../../../caa-dev/source/sass/generic/mixins";
+@import "variables";
+@import "mixins";
+
+// MIXINS & @IMPORTS
+// --------------------------------------------------
+@mixin line-break($break) { display: $break; }
+
+.group{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// --------------------------------------------------

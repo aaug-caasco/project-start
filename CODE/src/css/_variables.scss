@@ -1,0 +1,112 @@
+//Colors
+
+//brand
+$caa-blue:#00338d;
+$caa-blue-alt:#2962c6;
+$caa-blue-light:#dbe4f3;
+$caa-blue-light-alt:#ebecee;
+
+$caa-red:#cd281e;
+$caa-color-default:#333;
+
+$green-light: #65b32b;
+$green-dark: #3f9402;
+
+$disabled-grey-light:#ccc;
+$disabled-grey:#e7e7e7;
+$disabled-grey-dark:#999999;
+
+
+$grey-light: #f9f9f9;
+$grey-light-2: #f2eded;
+$grey-light-3: #ddd;
+
+$grey: #ccc;
+$grey-dark: #666;
+$grey-dark-2: #333;
+$white: #fff;
+$black: #000;
+$light-blue: #f5f9fb;
+$light-green: #ddecc3;
+$green: #61a62e;
+$opacity-light: rgba(0,0,0,0.5);
+$error: #f00;
+$valid: #089e00;
+$warn: #fff664;
+$info: #000db5;
+
+
+//Typography
+// @import url(//fast.fonts.net/cssapi/2dc67787-4d8d-43bf-a8f6-96f474b9302e.css);
+
+$font: "Neue Helvetica W01", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+// $font: "Source Sans Pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-secondary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+
+$font-size-smallest: em(10px);
+$font-size-smaller: em(12px);
+$font-size-small: em(14px);
+$font-size-regular: em(16px);
+$font-size-medium: em(18px);
+$font-size-large: em(23px);
+$font-size-larger: em(32px);
+
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+// $font-weight-light: 200;
+// $font-weight-normal: 300;
+// $font-weight-bold: 400;
+// $font-weight-bolder: 600;
+
+$line-height: 140%;
+$line-height-hdr: 120%;
+
+//Layout
+$max-width: 960px; //960px
+$min-width: 320px; //960px
+
+//Defaults
+$space: 2%;
+$space-and-half: $space*1.5;
+$space-double: $space*2;
+$space-quad: $space*4;
+$space-half: $space/2;
+$pad: 4%;
+$pad-and-half: $pad*1.5;
+$pad-double: $pad*2;
+$pad-half: $pad/2;
+$pad-quarter:$pad/4;
+
+
+$btn-pad-lrg:13px 30px;
+$btn-pad-sml:8px 20px;
+
+
+$v-margin: 16px;
+$v-margin-and-half: $v-margin*1.5;
+$v-margin-double: $v-margin*2;
+$v-margin-half: $v-margin/2;
+$v-margin-quarter: $v-margin/4;
+
+
+//Borders
+$border: 1px solid $grey;
+
+$corner: em(2px);
+
+
+//Breakpoints
+$bp-smallest: em(320px);
+//$bp-small-2 : 29.75em;
+$bp-small: em(569px);
+$bp-med: em(960px);
+//$bp-med-2 : 48em;
+$bp-large: 50em;
+//$bp-large-2 : 66em;
+//$bp-xl : 73em;
+//$bp-xxl : 89em;
+//$bp-xxxl : 93em;
+
+//
