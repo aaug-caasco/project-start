@@ -1,0 +1,18 @@
+.overlay {
+  background-color: #333;
+  opacity: 0.1;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 410px;
+  left: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+
+  @media screen {
+    @media (max-width: $bp-medr) { height: 320px; }
+  }
+}
