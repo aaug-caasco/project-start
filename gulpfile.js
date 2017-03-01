@@ -71,7 +71,7 @@ gulp.task('prettify', function() {
 
 // copy Task
 gulp.task('copy-img', function (cb) {
-    copy('CODE/src/img/*.{png,gif,jpg}', './CODE/dist/img', cb);
+    copy('CODE/src/img/*.{png,gif,jpg,svg}', './CODE/dist/img', cb);
 });
 
 
