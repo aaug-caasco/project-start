@@ -70,13 +70,13 @@ gulp.task('copy-img', function (cb) {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('CODE/src/**/*.html', ['prettify'])
-    gulp.watch('CODE/src/**/*.js', ['lint', 'scripts'])
-    gulp.watch('CODE/src/**/*.scss', ['styles'])
-    gulp.watch('CODE/src/**/*.css', ['mmq'])
-    gulp.watch('CODE/src/img/', ['copy-img'])
+    gulp.watch('CODE/src/**/*.html', ['prettify']);
+    gulp.watch('CODE/src/**/*.js', ['lint', 'scripts']);
+    gulp.watch('CODE/src/**/*.scss', ['styles']);
+    gulp.watch('CODE/src/**/*.css', ['mmq']);
+    gulp.watch('CODE/src/img/', ['copy-img']);
     // Create LiveReload server
-    livereload.listen()
+    livereload.listen();
     // Watch any files in dist/, reload n change
     gulp.watch(['CODE/dist/**']).on('change', livereload.changed);
 });
