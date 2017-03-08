@@ -6,7 +6,6 @@ var gulp = require('gulp'),
       prettify = require('gulp-prettify'),
       sourcemaps = require('gulp-sourcemaps'),
       mmq = require('gulp-merge-media-queries'),
-      autoprefixer = require('gulp-autoprefixer'),
       notify = require('gulp-notify'),
       copy = require('copy'),
       livereload = require('gulp-livereload');
@@ -46,12 +45,6 @@ gulp.task('mmq', function () {
     .pipe(sourcemaps.init())
     .pipe(mmq({
         log: true
-    }))
-    .pipe(autoprefixer({
-        browsers: ['last 10 versions'],
-        cascade: false,
-        flexbox: true,
-        grid:true
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('CODE/dist/css/'))
