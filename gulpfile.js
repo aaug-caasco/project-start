@@ -1,14 +1,14 @@
 // Include gulp
 var gulp = require('gulp'),
-      // Include Our Plugins
-      jshint = require('gulp-jshint'),
-      sass = require('gulp-ruby-sass'),
-      prettify = require('gulp-prettify'),
-      sourcemaps = require('gulp-sourcemaps'),
-      mmq = require('gulp-merge-media-queries'),
-      notify = require('gulp-notify'),
-      copy = require('copy'),
-      livereload = require('gulp-livereload');
+    // Include Our Plugins
+    jshint = require('gulp-jshint'),
+    sass = require('gulp-ruby-sass'),
+    prettify = require('gulp-prettify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    mmq = require('gulp-merge-media-queries'),
+    notify = require('gulp-notify'),
+    copy = require('copy'),
+    livereload = require('gulp-livereload');
 
 
 // Lint Task
