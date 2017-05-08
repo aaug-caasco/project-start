@@ -93,12 +93,12 @@ gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
 );
 
 
+
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('CODE/src/**/*.html', ['prettify'])
-  gulp.watch('CODE/src/**/*.js', ['lint', 'scripts'])
+  gulp.watch('CODE/src/**/*.html', ['htmlTask'])
   gulp.watch('CODE/src/**/*.scss', ['styles'])
-  gulp.watch('CODE/src/**/*.css', ['mmq'])
+  gulp.watch('CODE/src/**/*.js', ['scripts'])
   gulp.watch('CODE/src/img/', ['imgmin'])
   // Create LiveReload server
   livereload.listen()
