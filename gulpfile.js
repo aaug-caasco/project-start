@@ -8,6 +8,7 @@ var gulp = require('gulp'),
   mmq = require('gulp-merge-media-queries'),
   notify = require('gulp-notify'),
   prettify = require('gulp-prettify'),
+  prettifyJS = require('gulp-js-prettify'),
   sass = require('gulp-ruby-sass'),
   sourcemaps = require('gulp-sourcemaps');
 
@@ -47,16 +48,39 @@ gulp.task('styles', function() {
 
 
 
-// HTML Task
-gulp.task('prettify', function() {
-  gulp.src('CODE/src/**/*.html')
-    .pipe(prettify({
-      indent_size: 2
-    }))
-    .pipe(gulp.dest('CODE/dist'))
-    .pipe(notify({
-      message: 'HTML task complete'
-    }));
+gulp.task('scripts', function() {
+  return gulp.src('CODE/src/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(prettifyJS(
+    {
+      "indent_size": 2,
+      "indent_char": " ",
+      "indent_with_tabs": false,
+      "eol": "\n",
+      "end_with_newline": false,
+      "indent_level": 0,
+      "preserve_newlines": false,
+      "max_preserve_newlines": 10,
+      "space_in_paren": true,
+      "space_in_empty_paren": false,
+      "jslint_happy": false,
+      "space_after_anon_function": false,
+      "brace_style": "collapse",
+      "break_chained_methods": false,
+      "keep_array_indentation": false,
+      "unescape_strings": false,
+      "wrap_line_length": 0,
+      "e4x": false,
+      "comma_first": false,
+      "operator_position": "before-newline"
+    }
+  ))
+  .pipe(gulp.dest('CODE/dist/'))
+  .pipe(livereload())
+  .pipe(notify({
+    message: 'Scripts task complete'
+  }));
 });
 
 
