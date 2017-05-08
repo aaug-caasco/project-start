@@ -16,6 +16,8 @@
   "devDependencies": {
     "copy": "^0.2.3",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-js-prettify": "^0.1.0",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-merge-media-queries": "^0.2.1",
