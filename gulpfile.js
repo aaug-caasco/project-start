@@ -25,46 +25,26 @@ gulp.task('htmlTask', function() {
 });
 
 
-//Concatenate & Minify JS
-gulp.task('scripts', function() {
-  return gulp.src('CODE/src/**/*.js')
-    // .pipe(prettify({indent_size: 2}))
-    .pipe(gulp.dest('CODE/dist/'))
-    .pipe(livereload())
-    .pipe(notify({
-      message: 'Scripts task complete'
-    }));
-});
 
-
-// Compile Our Sass
+// CSS Task
 gulp.task('styles', function() {
   return sass('CODE/src/**/*.scss', {
-      style: 'expanded'
-    })
-    .on('error', sass.logError)
-    .pipe(gulp.dest('CODE/src/'))
-    .pipe(livereload())
-    .pipe(notify({
-      message: 'Styles task complete'
-    }));
+    style: 'expanded',
+    sourcemap: true
+  })
+  .pipe(sourcemaps.init())
+  .on('error', sass.logError)
+  .pipe(mmq({
+    log: true
+  }))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('CODE/dist/'))
+  .pipe(livereload())
+  .pipe(notify({
+    message: 'Styles task complete'
+  }));
 });
 
-
-//Merge Media Queries
-gulp.task('mmq', function() {
-  return gulp.src('CODE/src/css/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(mmq({
-      log: true
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('CODE/dist/css/'))
-    .pipe(livereload())
-    .pipe(notify({
-      message: 'Merge complete'
-    }));
-});
 
 
 // HTML Task
