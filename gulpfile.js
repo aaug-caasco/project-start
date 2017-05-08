@@ -12,11 +12,16 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps');
 
 
-// Lint Task
-gulp.task('lint', function() {
-  return gulp.src('CODE/src/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+// HTML Task
+gulp.task('htmlTask', function() {
+  gulp.src('CODE/src/**/*.html')
+  .pipe(prettify({
+    indent_size: 2
+  }))
+  .pipe(gulp.dest('CODE/dist'))
+  .pipe(notify({
+    message: 'HTML task complete'
+  }));
 });
 
 
