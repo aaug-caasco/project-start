@@ -84,15 +84,12 @@ gulp.task('scripts', function() {
 });
 
 
-// optimization Task
+
+// IMG Task
 gulp.task('imgmin', () =>
-  gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
-  .pipe(imgmin([
-    imgmin.optipng({
-      optimizationLevel: 5
-    })
-  ]))
-  .pipe(gulp.dest('./CODE/dist/img'))
+gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
+.pipe(imgmin())
+.pipe(gulp.dest('./CODE/dist/img'))
 );
 
 
