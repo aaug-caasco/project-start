@@ -12,14 +12,33 @@
   }
 }
 
-.mol-col-2 {
+.mol-col-two {
   width: 48.5%;
   float: left;
   margin-left: 3%;
 
-  &:first-child { margin-left: 0 !important; }
+  &:first-child { margin-left: 0; }
 
-  @media only screen and (max-width: 540px) {
+  img { width: 100%; }
+
+  h2 {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  p { padding-bottom: 60px; }
+
+  a {
+    color: #00338d;
+
+    &.atom-btn-sml {
+      position: absolute;
+      bottom: 20px;
+      color: #fff;
+    }
+  }
+
+  @media only screen and (max-width: $bp-540) {
     width: 100%;
     margin-left: 0;
     margin-bottom: 20px;
