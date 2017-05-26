@@ -87,9 +87,12 @@ gulp.task('scripts', function() {
 
 // IMG Task
 gulp.task('imgmin', () =>
-gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
-.pipe(imgmin())
-.pipe(gulp.dest('./CODE/dist/img'))
+  gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
+    .pipe(imgmin())
+    .pipe(gulp.dest('./CODE/dist/img'))
+    .pipe(notify({
+      message: 'Images task complete'
+    }))
 );
 
 
