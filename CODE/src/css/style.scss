@@ -1,11 +1,10 @@
 @import "variables";
 @import "mixins";
-
 // MIXINS & @IMPORTS
 // --------------------------------------------------
 @mixin line-break($break) { display: $break; }
 
-.group{
+.group {
   &:after {
     content: "";
     display: table;

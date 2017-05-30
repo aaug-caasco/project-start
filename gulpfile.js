@@ -16,13 +16,13 @@ var gulp = require('gulp'),
 // HTML Task
 gulp.task('htmlTask', function() {
   gulp.src('CODE/src/**/*.html')
-  .pipe(prettify({
-    indent_size: 2
-  }))
-  .pipe(gulp.dest('CODE/dist'))
-  .pipe(notify({
-    message: 'HTML task complete'
-  }));
+    .pipe(prettify({
+      indent_size: 2
+    }))
+    .pipe(gulp.dest('CODE/dist'))
+    .pipe(notify({
+      message: 'HTML task complete'
+    }));
 });
 
 
@@ -30,20 +30,20 @@ gulp.task('htmlTask', function() {
 // CSS Task
 gulp.task('styles', function() {
   return sass('CODE/src/**/*.scss', {
-    style: 'expanded',
-    sourcemap: true
-  })
-  .pipe(sourcemaps.init())
-  .on('error', sass.logError)
-  .pipe(mmq({
-    log: true
-  }))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('CODE/dist/'))
-  .pipe(livereload())
-  .pipe(notify({
-    message: 'Styles task complete'
-  }));
+      style: 'expanded',
+      sourcemap: true
+    })
+    .pipe(sourcemaps.init())
+    .on('error', sass.logError)
+    .pipe(mmq({
+      log: true
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('CODE/dist/'))
+    .pipe(livereload())
+    .pipe(notify({
+      message: 'Styles task complete'
+    }));
 });
 
 
@@ -52,8 +52,7 @@ gulp.task('scripts', function() {
   return gulp.src('CODE/src/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(prettifyJS(
-    {
+    .pipe(prettifyJS({
       "indent_size": 2,
       "indent_char": " ",
       "indent_with_tabs": false,
@@ -74,13 +73,12 @@ gulp.task('scripts', function() {
       "e4x": false,
       "comma_first": false,
       "operator_position": "before-newline"
-    }
-  ))
-  .pipe(gulp.dest('CODE/dist/'))
-  .pipe(livereload())
-  .pipe(notify({
-    message: 'Scripts task complete'
-  }));
+    }))
+    .pipe(gulp.dest('CODE/dist/'))
+    .pipe(livereload())
+    .pipe(notify({
+      message: 'Scripts task complete'
+    }));
 });
 
 
@@ -88,11 +86,11 @@ gulp.task('scripts', function() {
 // IMG Task
 gulp.task('imgmin', () =>
   gulp.src('CODE/src/img/*.{png,gif,jpg,svg}')
-    .pipe(imgmin())
-    .pipe(gulp.dest('./CODE/dist/img'))
-    .pipe(notify({
-      message: 'Images task complete'
-    }))
+  .pipe(imgmin())
+  .pipe(gulp.dest('./CODE/dist/img'))
+  .pipe(notify({
+    message: 'Images task complete'
+  }))
 );
 
 
