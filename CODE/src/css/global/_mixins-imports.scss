@@ -1,0 +1,29 @@
+@mixin line-break($break) { display: $break; }
+
+.group{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.fw_img { width: 100%; }
+
+.mar-r-l-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pad-l-r-15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.section-heading {
+  font-size: 24px;
+  width: 100%;
+  margin-left: 0;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
