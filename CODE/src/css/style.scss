@@ -1,14 +1,5 @@
-@import "variables";
-@import "mixins";
-// MIXINS & @IMPORTS
-// --------------------------------------------------
-@mixin line-break($break) { display: $break; }
-
-.group {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-// --------------------------------------------------
+@import "global/_breakpoints";
+@import "global/_columns";
+@import "global/_mixins-imports";
+@import "global/_overlay";
+@import "global/_variables";
